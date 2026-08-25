@@ -15,7 +15,7 @@ RUN apt update && apt install -y \
     libportaudio2
 RUN rm -rf /var/lib/apt/lists/*
 
-COPY . .
+COPY . . 
 
 RUN python3 -m venv .venv
 
