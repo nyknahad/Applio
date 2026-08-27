@@ -887,7 +887,7 @@ def train_and_evaluate(
                 record
                 + f" | lowest_value={lowest_value_rounded} (epoch {lowest_value['epoch']} and step {lowest_value['step']})"
             )
-        print(record)
+        print(record, flush=True)
 
         # Save weights every N epochs
         if epoch % save_every_epoch == 0:
