@@ -634,7 +634,7 @@ def train_and_evaluate(
         data_iterator = enumerate(train_loader)
 
     epoch_recorder = EpochRecorder()
-    with tqdm(total=len(train_loader), leave=False) as pbar:
+    with tqdm(total=len(train_loader), leave=False, disable=True) as pbar:
         for batch_idx, info in data_iterator:
             if device.type == "cuda" and not cache_data_in_gpu:
                 info = [tensor.cuda(device_id, non_blocking=True) for tensor in info]
