@@ -46,6 +46,6 @@ assert '+cu128' in torchaudio.__version__; \
 assert '+cu128' in torchvision.__version__; \
 assert torch.version.cuda.startswith('12.8')"
 
-EXPOSE 6969,6006
+EXPOSE 6969 6006
 
 CMD [".venv/bin/python", "app.py", "--server-name", "0.0.0.0"]
